@@ -7,21 +7,15 @@
         <li routerLinkActive="active">
           <a [routerLink]="['/welcome']">Home</a>
         </li>
-        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          <a [routerLink]="['/products']">Product List</a>
-        </li>
-        <li routerLinkActive="active">
-          <a [routerLink]="['/products', 0, 'edit']">Add Product</a>
-        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="authService.isLoggedIn()">
           <a>Welcome {{ authService.currentUser.userName }}</a>
         </li>
-        <li *ngIf="!messageService.isDisplayed">
+        <li class="pointer" *ngIf="!messageService.isDisplayed">
           <a (click)="displayMessages()">Show Messages</a>
         </li>
-        <li *ngIf="messageService.isDisplayed">
+        <li class="pointer" *ngIf="messageService.isDisplayed">
           <a (click)="hideMessages()">Hide Messages</a>
         </li>
         <li *ngIf="!authService.isLoggedIn()">

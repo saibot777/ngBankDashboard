@@ -30,7 +30,7 @@ li {
 }*/
 
 /* Slide transition */
-pm-app div.panel.panel-primary {
+app-root div.panel.panel-primary {
   animation-duration: .5s;
   animation-name: slideIn;
   animation-fill-mode: forwards;
@@ -59,6 +59,9 @@ pm-app div.panel.panel-primary {
 .glyphicon-spin {
   -webkit-animation: spin 1000ms infinite linear;
   animation: spin 1000ms infinite linear;
+}
+.pointer {
+  cursor: pointer;
 }
 @-webkit-keyframes spin {
   0% {
