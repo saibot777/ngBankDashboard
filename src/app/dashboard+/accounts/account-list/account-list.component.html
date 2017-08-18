@@ -1,0 +1,19 @@
+<div class="row" *ngIf="accounts.length == 0">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="alert alert-info text-center">
+      <strong>No accounts yet?</strong> Please add it...
+    </div>
+  </div>
+</div>
+<div class="row" *ngIf="accounts.length > 0">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 acc" *ngFor="let account of accounts">
+    <h2 class="title">{{account.id}} ({{account.title}})</h2>
+    <p>{{account.description}}</p>
+    <p>Balance: <strong class="lead">{{account.balance}}</strong></p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button class="btn btn-danger" (click)="_destroy(index)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
