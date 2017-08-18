@@ -15,6 +15,7 @@ import {HomeModule} from "./home+/home.module";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from './app.component';
+import {DashboardModule} from "./dashboard+/dashboard.module";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AppComponent } from './app.component';
     RouterModule,
     SharedModule,
     HomeModule,
+    DashboardModule,
     UserHandlingModule,
     MessageModule,
     AppRoutingModule,
