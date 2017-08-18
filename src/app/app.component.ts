@@ -6,7 +6,8 @@ import {MessageService} from "./shared/messages+/message.service";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   pageTitle: string = 'Frenzie Bank Management';
