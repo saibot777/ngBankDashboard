@@ -8,7 +8,7 @@ import {Account} from "../shared/models/account.model";
 export class DashboardComponent {
   public accounts: Array<Account>;
   private accountLimit: number;
-  private createAccountError: string;
+  public createAccountError: string;
   private nextId: number;
 
   constructor() {
@@ -32,7 +32,7 @@ export class DashboardComponent {
     this.createAccountError = '';
   }
 
-  private storeAccount(account: Account): void {
+  public storeAccount(account: Account): void {
     if (this.accounts.length < this.accountLimit) {
       account.id = this.nextId++;
       this.accounts.push(account);

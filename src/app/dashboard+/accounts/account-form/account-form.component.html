@@ -1,0 +1,49 @@
+<div class="row" *ngIf="error">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="alert alert-danger text-center">
+      <strong>Error!</strong> {{ error }}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <form>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h3>Add new account</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input class="form-control" id="title" type="text" name="title" #title>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input class="form-control" id="description" type="text" name="description" #description>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="form-group">
+            <label for="balance">Balance</label>
+            <input class="form-control" id="balance" type="number" name="balance" value="0" #balance>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="form-group text-center">
+            <button class="btn btn-success" (click)="_store(title,description,balance)">Store</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
