@@ -11,7 +11,7 @@ export class AccountListComponent {
 
   @Output() destroy = new EventEmitter<Number>();
 
-  private _destroy(index: number): void {
+  public _destroy(index: number): void {
     this.destroy.emit(index);
   }
 

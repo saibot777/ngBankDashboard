@@ -5,11 +5,13 @@ import {userHandlingComponents, userHandlingServices} from "./dashboard.collecti
 import {RouterModule} from "@angular/router";
 import {AuthGuardService} from "../user-handling+/shared/services/auth-guard.service";
 import {DashboardComponent} from "./dashboard-component/dashboard.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
+    FormsModule,
     RouterModule.forChild([
       {
         path: 'dashboard',

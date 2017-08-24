@@ -41,7 +41,7 @@ export class DashboardComponent {
     }
   }
 
-  private destroyAccount(index: number): void {
+  public destroyAccount(index: number): void {
     this.accounts.splice(index, 1);
   }
 }

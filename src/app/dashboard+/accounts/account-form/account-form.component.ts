@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Account} from "../../shared/models/account.model";
 
 @Component({
@@ -6,11 +6,26 @@ import {Account} from "../../shared/models/account.model";
   templateUrl: './account-form.component.html',
   styleUrls: ['./account-form.component.css']
 })
-export class AccountFormComponent {
+export class AccountFormComponent implements OnInit {
   @Input() error: string;
   @Output() store = new EventEmitter<Account>();
+  account: Account;
 
-  private _store(title: any, description: any, balance: any) {
+  ngOnInit () {
+    this.account = {
+      id: 1,
+      title: "",
+      description: "",
+      balance: 0
+    };
+  }
+
+  save(model: Account, isValid: boolean) {
+    // check if model is valid
+    // if valid, call API to save customer
+    return this.store.emit(model);
+  }
+  public _store(title: any, description: any, balance: any) {
     const account: Account = new Account(
       0,
       title.value,
@@ -18,9 +33,6 @@ export class AccountFormComponent {
       balance.value
     );
     this.store.emit(account);
-    title.value = '';
-    description.value = '';
-    balance.value = 0;
   }
 
 }
